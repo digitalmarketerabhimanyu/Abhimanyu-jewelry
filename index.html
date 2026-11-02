@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#201510">
+  <meta name="description" content="Discover timeless gold, kundan and heirloom jewellery at Abhimanyu Jewelry in Udaipur, Rajasthan.">
+  <title>Abhimanyu Jewelry | Heirlooms of Udaipur</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #271a14;
+      --wine: #51251f;
+      --gold: #b8975b;
+      --gold-light: #d7bd85;
+      --paper: #f7f2e9;
+      --muted: #84796b;
+      --serif: "Cormorant Garamond", Georgia, serif;
+      --sans: "Jost", Arial, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; color: var(--ink); background: var(--paper); font-family: var(--sans); }
+    a { color: inherit; text-decoration: none; }
+    .topline { height: 34px; display: flex; align-items: center; justify-content: center; background: var(--wine); color: #f5e9d0; font-size: 10px; letter-spacing: .2em; text-transform: uppercase; }
+    .header { position: absolute; z-index: 2; top: 34px; left: 0; width: 100%; padding: 22px 7.5%; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #ffffff38; color: #fffaf0; }
+    .brand { display: flex; align-items: center; gap: 12px; }
+    .brand-mark { width: 37px; height: 37px; border: 1px solid var(--gold-light); display: grid; place-items: center; color: var(--gold-light); font: 600 21px var(--serif); transform: rotate(45deg); }
+    .brand-mark span { transform: rotate(-45deg); }
+    .brand-name { font: 600 25px/1 var(--serif); letter-spacing: .035em; }
+    .brand-name small { display: block; margin-top: 5px; font: 9px var(--sans); letter-spacing: .32em; text-transform: uppercase; color: var(--gold-light); }
+    .nav { display: flex; align-items: center; gap: 33px; font-size: 11px; letter-spacing: .12em; text-transform: uppercase; }
+    .nav a { transition: color .2s; }
+    .nav a:hover { color: var(--gold-light); }
+    .nav .visit-link { padding: 11px 18px; border: 1px solid var(--gold-light); color: var(--gold-light); }
+
+    .hero { min-height: 710px; height: min(850px, 100vh); position: relative; display: flex; align-items: center; overflow: hidden; color: #fffaf0; background: #281a14; }
+    .hero-image { position: absolute; inset: 0; background: linear-gradient(90deg, #211510ed 0%, #211510c9 42%, #21151029 100%), url("https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=2000&q=85") center 48% / cover; }
+    .hero::after { content: ""; position: absolute; inset: 15px; border: 1px solid #d7bd855c; pointer-events: none; }
+    .hero-content { position: relative; z-index: 1; width: min(610px, 80%); margin: 50px 0 0 13%; }
+    .eyebrow { display: flex; align-items: center; gap: 12px; color: var(--gold-light); font-size: 10px; letter-spacing: .28em; text-transform: uppercase; }
+    .eyebrow::before { content: ""; width: 34px; height: 1px; background: var(--gold-light); }
+    h1 { margin: 22px 0 15px; font: 400 clamp(58px, 8vw, 104px)/.86 var(--serif); letter-spacing: -.025em; }
+    h1 em { color: var(--gold-light); font-weight: 400; }
+    .hero-copy { max-width: 400px; margin: 24px 0 32px; color: #e8dfd1; font-size: 14px; font-weight: 300; line-height: 1.9; }
+    .button { display: inline-flex; align-items: center; gap: 20px; padding: 14px 20px; background: var(--gold); color: #211710; font-size: 10px; letter-spacing: .16em; text-transform: uppercase; transition: background .2s; }
+    .button:hover { background: var(--gold-light); }
+    .button span { font-size: 18px; line-height: 10px; }
+    .hero-note { position: absolute; right: 7%; bottom: 56px; z-index: 1; color: #fffaf0; font: italic 17px var(--serif); letter-spacing: .04em; }
+    .hero-note::before { content: ""; display: inline-block; width: 28px; height: 1px; margin: 0 12px 5px 0; background: var(--gold-light); }
+
+    .intro { padding: 95px 24px 90px; text-align: center; }
+    .section-label { color: var(--gold); font-size: 10px; letter-spacing: .25em; text-transform: uppercase; }
+    .intro h2, .section-heading h2 { margin: 13px 0; font: 500 clamp(39px, 5vw, 57px)/1 var(--serif); }
+    .intro p { max-width: 590px; margin: 17px auto 0; color: var(--muted); font-size: 13px; line-height: 1.9; }
+    .ornament { display: flex; align-items: center; justify-content: center; gap: 10px; margin: 22px auto 0; color: var(--gold); }
+    .ornament::before, .ornament::after { content: ""; width: 43px; height: 1px; background: #cbb98e; }
+
+    .collections { padding: 18px 7.5% 100px; }
+    .section-heading { display: flex; align-items: end; justify-content: space-between; margin-bottom: 31px; }
+    .section-heading h2 { margin-bottom: 0; }
+    .section-heading p { max-width: 280px; margin: 0 0 3px; color: var(--muted); font-size: 12px; line-height: 1.7; }
+    .collection-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 19px; }
+    .collection-card { position: relative; min-height: 420px; overflow: hidden; background: #dfd4c2; }
+    .collection-card img { width: 100%; height: 420px; display: block; object-fit: cover; transition: transform .6s; }
+    .collection-card:hover img { transform: scale(1.045); }
+    .collection-card::after { content: ""; position: absolute; inset: 35% 0 0; background: linear-gradient(transparent, #211710c9); }
+    .card-caption { position: absolute; z-index: 1; left: 25px; bottom: 24px; color: white; }
+    .card-caption span { color: var(--gold-light); font-size: 9px; letter-spacing: .2em; text-transform: uppercase; }
+    .card-caption h3 { margin: 5px 0 0; font: 500 31px var(--serif); }
+
+    .heritage { min-height: 445px; display: grid; grid-template-columns: 1fr 1fr; background: #eae1d2; }
+    .heritage-photo { min-height: 445px; background: url("https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=1200&q=85") center / cover; }
+    .heritage-copy { padding: 70px clamp(35px, 8vw, 115px); align-self: center; }
+    .heritage-copy h2 { max-width: 420px; margin: 15px 0 17px; font: 500 clamp(42px, 5vw, 60px)/.98 var(--serif); }
+    .heritage-copy p { max-width: 450px; color: var(--muted); font-size: 13px; line-height: 1.9; }
+    .heritage-copy .signature { margin-top: 24px; color: var(--wine); font: italic 23px var(--serif); }
+
+    .visit { padding: 84px 7.5%; display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; background: var(--wine); color: #fff8eb; }
+    .visit h2 { margin: 12px 0 14px; font: 500 clamp(42px, 5vw, 58px)/.98 var(--serif); }
+    .visit p { color: #e0d0bd; font-size: 13px; line-height: 1.9; }
+    .visit .section-label { color: var(--gold-light); }
+    .contact-card { padding: 29px 34px; border: 1px solid #d7bd856b; }
+    .contact-row { display: grid; grid-template-columns: 83px 1fr; gap: 14px; padding: 15px 0; border-bottom: 1px solid #ffffff24; }
+    .contact-row:last-child { border-bottom: 0; }
+    .contact-row strong { color: var(--gold-light); font-size: 9px; font-weight: 500; letter-spacing: .17em; text-transform: uppercase; }
+    .contact-row span, .contact-row a { font: 500 19px var(--serif); }
+    .contact-row a:hover { color: var(--gold-light); }
+    footer { display: flex; align-items: center; justify-content: space-between; padding: 22px 7.5%; background: #211610; color: #bcad99; font-size: 10px; letter-spacing: .08em; }
+    footer .brand-name { color: #fff8eb; font-size: 20px; }
+    footer .brand-name small { font-size: 8px; }
+
+    @media (min-width: 761px) and (max-width: 1000px) {
+      .collection-grid { grid-template-columns: repeat(2, 1fr); }
+      .collection-card, .collection-card img { height: 390px; min-height: 390px; }
+    }
+
+    @media (max-width: 760px) {
+      .header { padding: 17px 7%; }
+      .brand-name { font-size: 22px; }
+      .nav { gap: 14px; }
+      .nav a:not(.visit-link) { display: none; }
+      .nav .visit-link { padding: 10px 12px; font-size: 9px; }
+      .hero { min-height: 650px; height: 88vh; }
+      .hero-image { background-position: 58% center; }
+      .hero-content { width: 84%; margin-left: 9%; }
+      .hero-note { right: 9%; bottom: 42px; font-size: 14px; }
+      .intro { padding: 75px 25px; }
+      .collections { padding: 10px 7% 70px; }
+      .section-heading { display: block; }
+      .section-heading p { margin-top: 13px; }
+      .collection-grid { grid-template-columns: 1fr; gap: 14px; }
+      .collection-card, .collection-card img { min-height: 370px; height: 370px; }
+      .heritage { grid-template-columns: 1fr; }
+      .heritage-photo { min-height: 340px; }
+      .heritage-copy { padding: 55px 9%; }
+      .visit { grid-template-columns: 1fr; gap: 28px; padding: 65px 8%; }
+      .contact-card { padding: 20px 19px; }
+      .contact-row { grid-template-columns: 69px 1fr; }
+      .contact-row span, .contact-row a { font-size: 17px; }
+      footer { gap: 15px; flex-wrap: wrap; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topline">A legacy of fine craftsmanship · Udaipur, Rajasthan</div>
+  <header class="header">
+    <a class="brand" href="#home" aria-label="Abhimanyu Jewelry home">
+      <span class="brand-mark"><span>A</span></span>
+      <span class="brand-name">Abhimanyu<small>Jewelry · Udaipur</small></span>
+    </a>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="#collections">Collections</a>
+      <a href="#heritage">Our story</a>
+      <a class="visit-link" href="#visit">Visit the showroom</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-image" aria-hidden="true"></div>
+      <div class="hero-content">
+        <div class="eyebrow">Jewels with a story</div>
+        <h1>Made to be<br><em>remembered.</em></h1>
+        <p class="hero-copy">Some treasures are more than adornment. Discover enduring Indian craftsmanship, thoughtfully chosen for the moments that become family history.</p>
+        <a class="button" href="#collections">Explore our collections <span>→</span></a>
+      </div>
+      <div class="hero-note">A little old-world, always yours</div>
+    </section>
+
+    <section class="intro">
+      <div class="section-label">The art of adornment</div>
+      <h2>Timeless by nature.</h2>
+      <div class="ornament" aria-hidden="true">✦</div>
+      <p>Inspired by the royal spirit of Rajasthan, every piece brings together classic design and the quiet beauty of detail. Find the one you will treasure today—and pass on tomorrow.</p>
+    </section>
+
+    <section class="collections" id="collections">
+      <div class="section-heading">
+        <div>
+          <div class="section-label">Chosen with care</div>
+          <h2>Explore the collection</h2>
+        </div>
+        <p>Beautifully considered pieces for celebrations, promises, and all the moments in between.</p>
+      </div>
+      <div class="collection-grid">
+        <a class="collection-card" href="#visit">
+          <img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=900&q=85" alt="Traditional gold jewellery with intricate detailing" loading="lazy" decoding="async">
+          <div class="card-caption"><span>Of enduring beauty</span><h3>Gold heirlooms</h3></div>
+        </a>
+        <a class="collection-card" href="#visit">
+          <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=900&q=85" alt="Elegant gemstone jewellery for special occasions" loading="lazy" decoding="async">
+          <div class="card-caption"><span>For life's celebrations</span><h3>Bridal treasures</h3></div>
+        </a>
+        <a class="collection-card" href="#visit">
+          <img src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=900&q=85" alt="Classic jewellery inspired by Indian artistry" loading="lazy" decoding="async">
+          <div class="card-caption"><span>A touch of tradition</span><h3>Kundan &amp; classics</h3></div>
+        </a>
+        <a class="collection-card" href="#visit">
+          <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=900&q=85" alt="Close-up of a finely set gemstone ring" loading="lazy" decoding="async">
+          <div class="card-caption"><span>Little details, lasting memories</span><h3>Rings &amp; keepsakes</h3></div>
+        </a>
+        <a class="collection-card" href="#visit">
+          <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=900&q=85" alt="A real close-up photograph of elegant earrings" loading="lazy" decoding="async">
+          <div class="card-caption"><span>Grace in every detail</span><h3>Earrings</h3></div>
+        </a>
+        <a class="collection-card" href="#visit">
+          <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=900&q=85" alt="Layered jewellery photographed in natural detail" loading="lazy" decoding="async">
+          <div class="card-caption"><span>Made for every day</span><h3>Everyday elegance</h3></div>
+        </a>
+      </div>
+    </section>
+
+    <section class="heritage" id="heritage">
+      <div class="heritage-photo" role="img" aria-label="A close view of finely crafted jewellery"></div>
+      <div class="heritage-copy">
+        <div class="section-label">Rooted in Rajasthan</div>
+        <h2>Old-world soul.<br>Forever yours.</h2>
+        <p>At Abhimanyu Jewelry, we believe the finest pieces never need to follow a trend. They belong to your story—chosen with care, worn with joy, and cherished for generations.</p>
+        <div class="signature">Made for your moments</div>
+      </div>
+    </section>
+
+    <section class="visit" id="visit">
+      <div>
+        <div class="section-label">We would love to welcome you</div>
+        <h2>Come find<br>your forever piece.</h2>
+        <p>Visit our showroom in the City of Lakes. We look forward to helping you find something truly special.</p>
+      </div>
+      <div class="contact-card">
+        <div class="contact-row"><strong>Visit us</strong><span>Udaipur, Rajasthan, India</span></div>
+        <div class="contact-row"><strong>Call us</strong><a href="tel:+918302076594">+91 83020 76594</a></div>
+        <div class="contact-row"><strong>Showroom</strong><span>Abhimanyu Jewelry</span></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a class="brand-name" href="#home">Abhimanyu<small>Jewelry · Udaipur</small></a>
+    <span>© 2026 Abhimanyu Jewelry. Crafted to be cherished.</span>
+    <a href="tel:+918302076594">+91 83020 76594</a>
+  </footer>
+</body>
+</html>
